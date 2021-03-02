@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestoque! Guarde bem o que está contigo!</title>
+</head>
+
+<body style="width: 1013px; height: 1400px; text-align: center; background-color: #CD853F;">
+
+    <div style="margin-top: 50px; margin-left: 380px;">
+        <img src="https://ecommercenapratica.com/wp-content/uploads/2018/12/loja-virtual-sem-estoque-8.png"
+            style=" width:250px; height: 170px; border-radius: 20px;">
+        <div style="width: 300px;  margin-left: 170px;"><b style="font-size: 40px;">Gestoque! Guarde bem o
+                que está contigo!</b></div>
+    </div>
+    <br>
+    <div style="margin-top: 20px; margin-left: 370px;">
+        <b style="font-size: 20px;">Nome do Produto</b> <br>
+        <input id="nomeProduto" type="text" placeholder="Nome do produto" style="width: 150px; height: 30px; background-color: #D2B48C; color:black; border-radius: 20px; font-size: 17px;"> <br><br>
+
+        <b style="font-size: 20px;">Unidade</b> <br>
+        <input id="unidade" type="text" placeholder="Unidade" style="width: 150px; height: 30px; background-color: #D2B48C; color:black; border-radius: 20px; font-size: 17px;" <br>
+        <div style="width: 200px; margin-left: 220px;"><b> (Informar se são unidades, quilos, litros, etc.)</b></div>
+        <br>
+
+        <b style="font-size: 20px;">Quantidade em estoque</b> <br>
+        <input id="qtdEstoque" type="text" placeholder="Quantidade estoque" style="width: 150px; height: 30px; background-color: #D2B48C; color:black; border-radius: 20px; font-size: 17px;"> <br><br>
+
+        <b style="font-size: 20px;">Valor de compra por Unidade</b> <br>
+        <input id="valCompraUnitario" type="text" placeholder="Valor de compra por Unidade" style="width: 150px; height: 30px; background-color: #D2B48C; color:black; border-radius: 20px; font-size: 17px;"> <br><br>
+
+        <b style="font-size: 20px;">Valor de venda por Unidade</b> <br>
+        <input id="valVendaUnitario" type="text" placeholder="Valor de venda por UnidadeNome do produto" style="width: 150px; height: 30px; background-color: #D2B48C; color:black; border-radius: 20px; font-size: 17px;"> <br><br>
+    </div>
+
+    <button onclick="analise()" style="margin-top: 20px; margin-left: 370px; width: 150px; height: 30px; background-color: #D2B48C; color:black; border-radius: 20px; font-size: 17px;"">Analisar estoque</button>
+
+    <div id="conexao" style="margin-top: 20px; margin-left: 370px;"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    function analise() {
+
+        var nomeProd = nomeProduto.value;;
+        var unid = unidade.value;
+        var qtdEst = qtdEstoque.value;
+        var valCompraUnit = valCompraUnitario.value;;
+        var valVendaUnit = valVendaUnitario.value;
+        var totalComp = valCompraUnit * qtdEst;
+        var calculoUnid = valVendaUnit - valCompraUnit;
+        var calculoDivisao = ((valVendaUnit / valCompraUnit) - 1) * 100;
+
+        conexao.innerHTML += (`<img src="https://media.tenor.com/images/79b918191ae9f673dd4f8bb55282c86e/tenor.gif">`);
+
+        conexao.innerHTML += (`<h1>Resultado da análise</h1>`);
+        conexao.innerHTML += (`<h2>Você possui um total de ${qtdEst} ${unid} de ${nomeProd} em estoque.</h2>`);
+        conexao.innerHTML += (`<h2>Você tem um total de R$ ${totalComp} em estoque de ${nomeProd}.</h2>`);
+        conexao.innerHTML += (`<h2>Vai lucar R$ ${calculoUnid} em cada ${nomeProd} vendido.</h2><br>`);
+
+        conexao.innerHTML += (`<h2>Como comprou cada unidade por ${valCompraUnit} e vai vender por ${valVendaUnit}, sua margem de lucro será de ${calculoDivisao}%.
+        </h2><br><br>`);
+
+        conexao.innerHTML += (`<h2>Valor de venda unidade = ${valVendaUnit}   *****   Valor de compra unidade = ${valCompraUnit}</h2><br>`);
+
+        conexao.innerHTML += (`<div style="width: 100px; height:10px; background: red; margin-left: 120px; float: left;"></div>
+        <div style="width: 300px; height:10px; background: green; float: left;"></div><br>`);
+    }
+</script>
