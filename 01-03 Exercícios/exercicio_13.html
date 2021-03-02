@@ -16,15 +16,19 @@
             style="background-color: #2c2c54; margin-top: 125px; width: 50px; height: 50px; border-radius: 50px; text-align: center; font-size: 20px; color:#f7f1e3; font-weight: bold;">
     </div>
 
-    <img src="nuvem 1.png" style="width: 100px; height: 100px; margin-top: 0px; float: left; margin-left: 600px;"><button onclick="horasSono()" style="font-size: 17px; color: #2c2c54; background-color: #f7f1e3; width: 100px; height: 50px; border-radius: 40px; font-weight: bold; float: left; margin-top: 20px;">Calcular Sono</button><img src="nuvem 1.png"
-        style="width: 100px; height: 100px; float: left;">
-
-        <div id="conexao"></div>
+    <img src="nuvem 1.png" style="width: 100px; height: 100px; margin-top: 0px; float: left; margin-left: 600px;">
+    <button onclick="horasSono()"
+        style="font-size: 17px; color: #2c2c54; background-color: #f7f1e3; width: 100px; height: 50px; border-radius: 40px; font-weight: bold; float: left; margin-top: 20px;">Calcular
+        Sono</button>
+    <img src="nuvem 1.png" style="width: 100px; height: 100px; float: left;">
+    <br>
+    <div id="conexao"></div>
 </body>
+
 </html>
 
 <script>
-    function horasSono(){
+    function horasSono() {
 
         var hSono = horasDeSono.value;
         var fase1 = 0.05;
@@ -39,4 +43,6 @@
         conexao.innerHTML += ` <br><h3>Ao dormir ${hSono} horas, você dormiu:</h3><br> <h3>${hFase1} horas na fase 1</h3> <h3>${hFase2} horas na fase 2 </h3> 
         <h3>${hFase3} horas na fase 3</h3> <h3>${hFaseRem} horas na fase REM</h3> `;
     }
+
+    //window.innerWidth = console - window.innerHeight = console
 </script>
