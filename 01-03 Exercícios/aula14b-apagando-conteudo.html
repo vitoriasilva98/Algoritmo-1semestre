@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 14 - Apagango Conteúdo</title>
+</head>
+
+<body>
+
+    <h2>Apagando o Conteúdo</h2>
+
+    Dorme agora
+    É só o vento lá fora <br>
+    Quero <b id="b_colo" >colo, vou</b> fugir de casa <br>
+    Posso <b id="b_dormir" >dormir aqui com vocês</b> ? <br>
+    <b id="b_medo" >Estou com medo tive um pesadelo <br> </b>
+    Só vou voltar depois das três <br>
+    Meu filho <i id="i_santo" >vai ter nome de santo <br>
+        Quero o nome mais</i> bonito
+    <br>
+    <p id="p_pessoas" >É preciso amar as pessoas <br>
+        Como se não houvesse amanhã <br>
+        Por que se você parar pra pensar <br>
+        Na verdade não há
+    </p>
+    <br>
+    <button onclick="palavras()">Apagar Palavras</button>
+    <button onclick="frase()">Apagar a última Frase</button>
+    
+
+</body>
+
+</html>
+<script>
+    function palavras() {
+    // se usar um par de aspas simples ou dupla, sem nada detro, o corpo da tab some da página
+    // valido para as tags que possuem corpo
+
+        b_colo.innerHTML = "";
+        b_dormir.innerHTML = '';
+        b_medo.innerHTML = '';
+        i_santo.innerHTML = '';
+    }
+
+    function frase() {
+       p_pessoas.innerHTML = '';
+    }
+
+    
+</script>
