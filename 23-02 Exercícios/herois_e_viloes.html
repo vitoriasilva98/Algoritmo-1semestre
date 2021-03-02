@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heróis e Vilões</title>
+</head>
+<body>
+    Meus heróis favoritos são: <span id="span_hero"></span>
+    <br>
+    <button onclick="herois()">Ver heróis</button>
+    <br>
+    Meus vilões favoritos são: <span id="span_villan"></span>
+    <br>
+    <button onclick="viloes()">Ver vilões</button>
+    
+</body>
+</html>
+<script>
+    function herois(){
+        span_hero.innerHTML = '<b>Visão</b> & <i>Wanda Maximof</i>';
+    }
+    function viloes(){
+        span_villan.innerHTML = 'DeadPool, Tanos';
+    }
+</script>

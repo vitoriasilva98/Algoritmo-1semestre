@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12</title>
+</head>
+<body>
+    Era uma vez... <button onclick="continuar()">Continuar</button>
+    <span id="span_continuacao"></span>
+    <br>
+    <button onclick="feliz()">Feliz</button>
+</body>
+</html>
+<script>
+    function continuar(){
+        span_continuacao.innerHTML = 'um lugarzinho no meio do nada!';
+    }
+
+    function feliz(){
+        span_continuacao.innerHTML = 'Joãozinho ganhou um milhão e viveu <b>feliz para sempre</b>!'
+    }
+
+    //span_continuacao.innerHTML - ele troco o corpo de uma tag
+</script>

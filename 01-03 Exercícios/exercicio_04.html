@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04 - Média</title>
+</head>
+<body>
+    <h1>Calculadora de média entre dois números</h1>
+    <br>
+    Insira o primeiro número: 
+    <input id="priNumero" type="text" placeholder="Insira o primeiro número"> <br> <br>
+    Insira o segundo número: 
+    <input id="segNumero" type="text" placeholder="Insira o segundo número"> <br> <br>
+
+    <button onclick="media()" style="background-color:chocolate; color:cornsilk; font-weight: bold;">Calcular Média</button>
+    <div id="conexao"></div>
+
+</body>
+</html>
+
+<script>
+
+    //Tentei fazer com variável, mas não deu certo ainda.
+    //var totalmedia = Number(priNumero.value) + Number(segNumero.value);
+    //var totalmedia = (Number(priNumero.value) + Number(segNumero.value)) / 2;
+    
+    function media(){
+        conexao.innerHTML += `Sua média foi de ${(Number(priNumero.value) + Number(segNumero.value)) / 2}<br>`;
+        //conexao.innerHTML += `Sua média foi de ${totalmedia}<br>`;
+    }
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14 - interpolação</title>
+</head>
+<body>
+    <h2>Input com interpolação</h2>
+    Entre com o seu <b> primeiro nome: </b>
+    <input id="primeiro" type="text" placeholder="primeiro nome">
+    <br>
+    Entre com o seu <b> sobrenome: </b>
+    <input id="ultimo" type="text" placeholder="sobrenome">
+    <br>
+    <button onclick="incluir()" style="background: chocolate; color: white;">Incluir</button>
+    <br>
+    <div id="div_mens">
+        <h3>Mini Cadastro de Nome</h3>
+        <b>Seu nome é: </b> 
+    </div>
+</body>
+</html>
+
+<script>
+    function incluir(){
+        div_mens.innerHTML += `${primeiro.value}  ${ultimo.value} <br>`;
+        primeiro.value = ' ';
+        ultimo.value = ' ';
+    }
+</script>

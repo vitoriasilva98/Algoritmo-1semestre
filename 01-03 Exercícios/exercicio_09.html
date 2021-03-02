@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09 - Quantos filhotes você têm?</title>
+</head>
+<body style="width: 1500px; height: 600px; margin: 0px; background-color: #6F1E51; text-align: center;">
+    <h1 style="color:#FDA7DF;">Calculadora - Bolsa Filhote</h1>
+    <br>
+    <h2 style="color:#ED4C67;">Quantos filhotes você têm?</h2>
+    <input id="qtd_filhote" type="text" placeholder="Quantos filhotes?" style="background-color: #ED4C67; color: #FDA7DF; width: 100px; height: 50px; font-size:30px; border-radius: 30px; border-color: #FDA7DF; text-align: center; ">
+    <br>
+    <br>
+    <button onclick="cal_filhote()" style="background-color: #2C3A47; color: #58B19F; width: 250px; height: 50px; font-size:20px; border-radius: 30px; border-color: #58B19F; text-align: center;">Calcular Bolsa Filhote</button>
+    <div id="conexao"></div>
+
+</body>
+</html>
+
+<script>
+    function cal_filhote(){
+        
+        var qtdFilhotes = qtd_filhote.value;
+        var valorFilhote = 25;
+        var calculo = qtdFilhotes * 25;
+
+        conexao.innerHTML += `<br><br><h1 style="color: #D6A2E8;">Você tem ${qtdFilhotes} filhotes, logo, sua "Bolsa Filhote" será de R$ ${calculo}</h1>`;
+    }
+</script>

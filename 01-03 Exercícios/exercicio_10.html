@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 - Quantos filhotes você têm? (por idade)</title>
+</head>
+
+<body style="width: 1500px; height: 600px; margin: 0px; background-color: #CAD3C8; text-align: center;">
+    <div style="float: left; width: 750px;">
+        <h1 style="color:#2C3A47;">Calculadora - Bolsa Filhote</h1>
+        <br>
+
+        <h2 style="color:#182C61;">Quantos filhotes com menos de 10 anos?</h2>
+        <input id="qtd_filhote_menor" type="text" placeholder="Quantos filhotes?"
+            style="background-color: #182C61; color: #9AECDB; width: 220px; height: 30px; font-size:20px; border-radius: 30px; border-color: #2C3A47; text-align: center; "><br>
+
+        <h2 style="color:#182C61;">Quantos filhotes com mais de 10 anos?</h2>
+        <input id="qtd_filhote_maior" type="text" placeholder="Quantos filhotes?"
+            style="background-color: #182C61; color: #9AECDB; width: 220px; height: 30px; font-size:20px; border-radius: 30px; border-color: #2C3A47; text-align: center; margin-bottom: 60px;">
+        <br>
+        <button onclick="cal_filhote()"
+            style="background-color: #2C3A47; color: #58B19F; width: 250px; height: 50px; font-size:20px; border-radius: 30px; border-color: #58B19F; text-align: center;">Calcular
+            Bolsa Filhote</button>
+    </div>
+    <div style="float: left; width: 750px;">
+        <div id="conexao"></div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function cal_filhote() {
+        var qtdFilhoteMenor = qtd_filhote_menor.value;
+        var qtdFilhoteMaior = qtd_filhote_maior.value;
+        var valorFilhoteMenor = 30;
+        var valorFilhoteMaior = 20;
+        var calculoMenor = qtdFilhoteMenor * valorFilhoteMenor;
+        var calculoMaior = qtdFilhoteMaior * valorFilhoteMaior;
+        var total = calculoMenor + calculoMaior;
+
+        conexao.innerHTML += `<h1 style="color:#2C3A47;">****Cálculo****</h1> <br + br><h2>*Filhotes com menos de 10 anos: R$30,00</h2><h2>*Filhotes com mais de 10 anos: R$20,00</h2>
+        <h2>****************************************</h2>
+        <br><h1 style="color:#2C3A47">Você tem ${qtdFilhoteMenor} filhos menores de 10 anos e ${qtdFilhoteMaior} filhos a partir de 10 anos, logo, sua "Bolsa Filhote" será de R$${total}</h1>`;
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ptS">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Futebol</title>
+</head>
+
+<body>
+
+    <button onclick="golRemo()">Gol do Remo</button>
+    <button onclick="golPay()">Gol do Paysandu</button>
+    <button onclick="escaRemo()">Escanteio para o Remo</button>
+    <button onclick="escaPay()">Escanteio para o Paysandu</button>
+
+    <h3>Placar do Jogo</h3>
+    <span id="golDoRemo"></span>
+    <span id="golDoPay"></span>
+    <span id="escanteioRemo"></span>
+    <span id="escanteioPay"></span>
+
+</body>
+
+</html>
+
+<script>
+    function golRemo() {
+        golDoRemo.innerHTML = '<p style="color: blue;">Goool do <b>Leão</b>!</p> <br>';
+    }
+    function golPay() {
+        golDoPay.innerHTML = '<p style="color: green;">Goool do <u>Mucura</u>!</p> <br>';
+    }
+    function escaRemo() {
+        escanteioRemo.innerHTML = 'Escanteio para o Leão! <br>';
+    }
+    function escaPay() {
+        escanteioPay.innerHTML = 'Escanteio para o Mucura! <br>';
+    }
+</script>

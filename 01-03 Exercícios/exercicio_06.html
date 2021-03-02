@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06 - Pizza!Hummmmm</title>
+</head>
+<body>
+    <h1>Pizzaria da Família Vitória</h1>
+    <br>
+    <h3>***Observação***</h3>
+    <h3 style="color: red"> *Pizza grande = R$ 32,00 (Qualquer sabor)</h3>
+    <br>
+    <br>
+    Insira o nome da pizza desejada: 
+    <input id="pizza_desejada" type="type" placeholder="Pizza desejada"> <br><br>
+    Quantos amigos vão comer com você? 
+    <input id="qtd_amigos" type="type" placeholder="Para quantas pessoas"> <br><br>
+    Quantas pizza?
+    <input id="qtd_pizza" type="type" placeholder="Quantas pizzas"> <br><br>
+    <br>
+    <button onclick="cal_pizza()" style="background-color: red; color: snow; font-weight: bold;">Calcular valor</button>
+    <div id="conexao"></div>
+</body>
+</html>
+
+<script>
+    function cal_pizza(){
+
+        var pizza = 32;
+        var qtdPizza = qtd_pizza.value;
+        var qtdAmigos = qtd_amigos.value;
+        var pizzaDesejada = pizza_desejada.value;
+        var divisao = (qtdPizza * pizza) / qtdAmigos;
+
+        //conexao.innerHTML += `<br>Cada amigo vai colaborar com <u>R$ ${(qtd_pizza.value * 32) / qtd_amigos.value}</u> para a pizza de <b style="color: red;">${pizza_desejada.value}</b>`;
+        conexao.innerHTML += `<br>Cada amigo vai colaborar com <u>R$ ${divisao}</u> para a pizza de <b style="color: red;">${pizzaDesejada}</b>`;
+    }
+</script>
